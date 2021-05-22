@@ -25,7 +25,7 @@
 
 - The images looks like:
   <p align="center">
-   <img src="https://github.com/lilosa88/Rock-Paper-and-Scissors/blob/main/Images/Screenshot%20from%202021-05-22%2008-41-11.png" width="760" height="480">
+   <img src="https://github.com/lilosa88/Rock-Paper-and-Scissors/blob/main/Images/Screenshot%20from%202021-05-22%2008-41-11.png" width="300" height="480">
   </p> 
   
 # Feature engineering
@@ -53,6 +53,6 @@
 - We obtained Accuracy 0.9806 for the train data and Accuracy 0.9624 for the validation data. 
 
  <p align="center">
-   <img src="https://github.com/lilosa88/Dogs-vs-Cats/blob/main/Images/Screenshot%20from%202021-05-22%2007-12-00.png" width="360" height="480">
+   <img src="https://github.com/lilosa88/Rock-Paper-and-Scissors/blob/main/Images/Screenshot%20from%202021-05-22%2008-41-55.png" width="360" height="480">
   </p> 
   
