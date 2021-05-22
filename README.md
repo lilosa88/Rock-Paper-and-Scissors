@@ -25,7 +25,7 @@
 
 - The images looks like:
   <p align="center">
-   <img src="https://github.com/lilosa88/Dogs-vs-Cats/blob/main/Images/Screenshot%20from%202021-05-22%2006-57-57.png" width="760" height="480">
+   <img src="https://github.com/lilosa88/Rock-Paper-and-Scissors/blob/main/Images/Screenshot%20from%202021-05-22%2008-41-11.png" width="760" height="480">
   </p> 
   
 # Feature engineering
@@ -40,72 +40,19 @@
 
 # Neural Network model
 
-#### First model: Neural Network with convolution and pooling
-
 - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the following:
   - Four Convolution layers with a corresponding MaxPooling layer each one which is then designed to compress the image, while maintaining the content of the           features that were highlighted by the convlution.
   - One flatten layer: It turns the images into a 1 dimensional set.
-  - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer           consisted in 512 neurons with relu as an activation function. The second, have 1 neurons and sigmoid as activation function. 
+  - One Dropout layer: with 50% of the neurons that will be removed.
+  - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer           consisted in 512 neurons with relu as an activation function. The second, have 3 neurons and softmax as activation function. 
 
-- We built this model using RMSprop optimizer with lr=0.001 and binary_crossentropy as loss function.
+- We built this model using RMSprop optimizer and categorical_crossentropy as loss function.
 
-- The number of epochs=100
+- The number of epochs=25
 
-- We obtained Accuracy 0.9875 for the train data and Accuracy 0.7050 for the validation data. As we can see we obtained a bag accuracy in validation, this is the result of overfitting.
+- We obtained Accuracy 0.9806 for the train data and Accuracy 0.9624 for the validation data. 
 
  <p align="center">
    <img src="https://github.com/lilosa88/Dogs-vs-Cats/blob/main/Images/Screenshot%20from%202021-05-22%2007-12-00.png" width="360" height="480">
   </p> 
   
-#### Second model: Neural Network with convolution and pooling making use of Imagen augmentation.
-
-- This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the following:
-  - Four Convolution layers with a corresponding MaxPooling layer each one which is then designed to compress the image, while maintaining the content of the           features that were highlighted by the convlution.
-  - One flatten layer: It turns the images into a 1 dimensional set.
-  - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer           consisted in 512 neurons with relu as an activation function. The second, have 1 neurons and sigmoid as activation function.
-  
-- We built this model using RMSprop optimizer with lr=0.001 and binary_crossentropy as loss function. This was applied on the images with Imagen Augmentation.
-
-- The number of epochs=100
-
-- We obtained Accuracy 0.7970 for the train data and Accuracy 0.8030 for the validation data.
-
-<p align="center">
-   <img src="https://github.com/lilosa88/Dogs-vs-Cats/blob/main/Images/Screenshot%20from%202021-05-22%2007-54-17.png" width="360" height="480">
-  </p> 
-  
-#### Third model: Neural Network with convolution, pooling and dropout making use of Imagen augmentation
-
-- This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the following:
-  - Four Convolution layers with a corresponding MaxPooling layer each one which is then designed to compress the image, while maintaining the content of the           features that were highlighted by the convlution.
-  - One Dropout layer with 50% of neurons that will be remove.
-  - One flatten layer: It turns the images into a 1 dimensional set.
-  - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer           consisted in 512 neurons with relu as an activation function. The second, have 1 neurons and sigmoid as activation function. 
-  
-- We built this model using RMSprop optimizer with lr=0.001 and binary_crossentropy as loss function.
-
-- The number of epochs=100
-
-- We obtained Accuracy 0.8105 for the train data and Accuracy 0.8140 for the validation data.
-
-<p align="center">
-   <img src="https://github.com/lilosa88/Dogs-vs-Cats/blob/main/Images/Screenshot%20from%202021-05-22%2008-08-22.png" width="360" height="480">
-  </p> 
-  
- 
-#### Fourth model: Learned Neural Network with convolution, pooling and dropout making use of Imagen augmentation. 
-
-- We make use of a pre-trained model that we obtained from InceptionV3. To this we add the following layers:
-  - One flatten layer: It turns the images into a 1 dimensional set.
-  - One Dropout layer: with 20% of the neurons that will be removed.
-  - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer           consisted in 1024 neurons with relu as an activation function. The second, have 1 neurons and sigmoid as activation function. 
-  
-- We built this model using RMSprop optimizer with lr=0.001 and binary_crossentropy as loss function.
-
-- The number of epochs=100
-
-- We obtained Accuracy 0.9610 for the train data and Accuracy 0.9590 for the validation data.
-
-<p align="center">
-   <img src="https://github.com/lilosa88/Dogs-vs-Cats/blob/main/Images/Screenshot%20from%202021-05-22%2008-22-11.png" width="360" height="300">
-  </p> 
