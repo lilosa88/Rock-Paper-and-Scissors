@@ -53,6 +53,6 @@
 - We obtained Accuracy 0.9806 for the train data and Accuracy 0.9624 for the validation data. 
 
  <p align="center">
-   <img src="https://github.com/lilosa88/Rock-Paper-and-Scissors/blob/main/Images/Screenshot%20from%202021-05-22%2008-41-55.png" width="360" height="480">
+   <img src="https://github.com/lilosa88/Rock-Paper-and-Scissors/blob/main/Images/Screenshot%20from%202021-05-22%2008-41-55.png" width="360" height="300">
   </p> 
   
